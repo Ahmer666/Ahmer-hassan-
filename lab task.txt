@@ -30,9 +30,9 @@ public class BineryToDecimal {
         // TODO code application logic here
         System.out.println("Decimal of 10 is: ");  
         tobinery(10);    
-        System.out.println("Decimal of 21 is: ");  
+        System.out.println("Decimal of 11 is: ");  
         tobinery(11);    
-        System.out.println("Decimal of 31 is: ");    
+        System.out.println("Decimal of 12 is: ");    
         tobinery(12);  
     }
     
