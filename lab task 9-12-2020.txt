@@ -1,42 +1,54 @@
 package bubblesort;
 
-public class Bubblesort {
-static public void bubblesort(int a[]){
-    int l=a.length;
-    for (int i = 0; i<=l-2; i++) {
-        for (int j = 0; j <=l-2; j++) {
-          if (a[j]>a[j+1]) {
-              int tem=a[j];
-              a[j]=a[j+1];
-           a[j+1]=tem;
-                    print(a);
-          System.out.println("");
-          System.out.println("---------------------------");
-}
-          print(a);
-          System.out.println("");
-          System.out.println("---------------------------");
-        }
+public class BubbleSort {
      
-    }
-    System.out.println("fial sorted array is: ");
-    print(a);
+  static   public void bubblesort(int[] arr){
     
+    int len= arr.length;
+    int temp;
+    for(int i=0; i < len; i++)
+		{  
+			for(int j=1; j < (len-i); j++)
+			{  
+			      
+				if(arr[j-1] > arr[j])
+				{   
+				    
+				
+					temp = arr[j-1];  
+					arr[j-1] = arr[j];  
+					arr[j] = temp;
+					printArray(arr);
+    
+    
+                                }
+      
+                        }
+                }
 }
-static public void print(int a[])
-{
-int l=a.length;
-    for (int i = 0; i <l; i++) {
-        System.out.print(a[i]+"  ");
-       
-       }
+  static   void printArray(int[] array){
+	    
+	    for(int i=0; i < array.length; i++)
+		{  
+			System.out.print(array[i] + " ");  
+		} 
+	    System.out.println();
+	    
+	}
+ 
+    
 
-    
-}
     public static void main(String[] args) {
-        int a[]={3,4,7,6,1,2,5};
-        bubblesort(a);
-       
-    }
-    
-}
+      int arr[] ={12,98,34,11};  
+ 
+		System.out.println("---Array BEFORE Bubble Sort---"); 
+		
+	    printArray(arr);
+ 
+		bubblesort(arr); 
+ 
+		System.out.println("---Array AFTER Bubble Sort---");  
+		
+		printArray(arr); 
+        
+    }}
